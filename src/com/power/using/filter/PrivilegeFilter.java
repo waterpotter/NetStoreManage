@@ -76,7 +76,7 @@ public class PrivilegeFilter implements Filter {
 			uri=uri+"?"+queryString;
 		}
 		//   /manage/addcategory.jsp
-		uri = uri.replace(request.getContextPath(), "");
+		uri.replace(request.getContextPath(), "");
 			//对比是否在权限访问之内
 		boolean hasPermission=false;//是否有权限
 		for (Function f : funs) {
